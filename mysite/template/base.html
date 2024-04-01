@@ -1,0 +1,70 @@
+{% load static %}
+<html lang="en" data-bs-theme="auto">
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HABER</title>
+
+
+
+    <link href="{% static 'css/loginCss/pop.css' %}" rel="stylesheet">
+    <link href="{% static 'css/loginCss/prism-toolbar.css' %}" rel="stylesheet">
+    <link href="{% static 'css/loginCss/prism-okaidia.css' %}" rel="stylesheet">
+    <link href="{% static 'css/loginCss/style.default.63c85ff9.css' %}" rel="stylesheet">
+
+
+
+    <link href="{% static 'css/_boots.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet"> 
+    <script src="{% static 'js/color_modes.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        {% include 'partials/darkmode.htm' %}
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        {% include 'partials/_drop.html' %}
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        {% include 'partials/cart.html' %}
+    </svg>
+
+
+    <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow"><a class="sidebar-toggler text-gray-500 me-4 me-lg-5 lead" href="#"><i class="fas fa-align-left"></i></a><a class="navbar-brand fw-bold text-uppercase text-base" href="index.html"><span class="d-none d-brand-partial">Bubbly </span><span class="d-none d-sm-inline">Dashboard</span></a>
+        {% include 'partials/_nav.html' %}
+    </nav>
+
+    <div class="d-flex align-items-stretch">
+        <div class="sidebar py-3" id="sidebar">
+            {% include 'partials/sidebar.html' %}
+        </div>
+        <main class="page-holder bg-gray-100"> 
+            {% block content %}
+            <!-- Your block content goes here -->
+            {% endblock %}
+        </main>
+    </div>
+
+    <footer class="container my-5">
+        {% include 'partials/footer.html' %}
+    </footer>
+
+
+    
+    <script src="{% static 'js/loginjs/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/loginjs/tester.js' %}"></script>
+    <script src="{% static 'js/loginjs/_theme.87f0a411.js' %}"></script>
+    <script src="{% static 'js/loginjs/prism.js' %}"></script>
+    <script src="{% static 'js//loginjs/prism-normalize-whitespace.min.js' %}"></script>
+    <script src="{% static 'js/loginjs/prism-toolbar.min.js' %}"></script>
+    <script src="{% static 'js/loginjs/prism-copy-to-clipboard.min.js' %}"></script>
+    <script src="{% static 'js/loginjs/text.js' %}"></script>
+    <script src="{% static 'js/van.js' %}"></script>
+    <link href="{% static 'css/loginCss/all.css' %}" rel="stylesheet">
+
+</body>
+</html>
